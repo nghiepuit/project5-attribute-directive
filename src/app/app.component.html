@@ -1,0 +1,35 @@
+<style>
+    
+    h3.panel-title{
+        position: relative;
+    }
+
+    div.panel-heading a{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    div.is-collapsed div.panel-body{
+        display: none;
+    }
+
+</style>
+
+
+<div class="row" style="margin: 100px">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-primary" [appCollapsed]="false" (oCollapsed)="onCollapsedChange($event)">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title
+					<a href="#" class="control">
+						<span class="glyphicon" [ngClass]="setClasses()" aria-hidden="true"></span>
+					</a>
+				</h3>
+            </div>
+            <div class="panel-body">
+                Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content Panel content 
+            </div>
+        </div>
+    </div>
+</div>
